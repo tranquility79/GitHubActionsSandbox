@@ -1,0 +1,8 @@
+name: Manual trigger for Push Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-push-workflow:
+    uses: ./.github/workflows/buildAndDeploy.yml
