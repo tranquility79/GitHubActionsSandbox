@@ -10,8 +10,11 @@ jobs:
   run-on-push:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
       - uses: actions/checkout@v
         with:
           ref: ${​​{​​ inputs.DEPLOYMENT_BRANCH }​​}​​
+      
+      - name: print
       - uses: echo "This workflow was triggered by a push"
   
